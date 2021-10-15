@@ -210,6 +210,10 @@ footer div p {
         max-width: 900px;
     }
 
+    .dropdown-menu[data-bs-popper] {
+        left: -49%;
+    }
+
 }
 
 @media all and (max-width:900px) {
