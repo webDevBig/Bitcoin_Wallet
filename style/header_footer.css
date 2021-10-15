@@ -34,10 +34,7 @@ header .navbar .container-fluid {
 }
 
 header .navbar-brand {
-    /*    font-family: 'Avenir';*/
-    font-family: 'Avenir-Book';
-    font-style: italic;
-    font-weight: 900;
+    font-family: 'AvenirLTProHeavyOblique';
     font-size: 24px;
     line-height: 33px;
     color: #1F1F1F;
@@ -52,7 +49,6 @@ header .navbar-brand img {
 }
 
 .navbar-expand-lg .navbar-collapse {
-    /*    width: auto;*/
     flex-grow: 0;
 }
 

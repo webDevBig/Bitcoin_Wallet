@@ -30,3 +30,43 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Avenir_Semi_Italic';
+    src: url('../avenir_ff/Metropolis-SemiBoldItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir_Bold_Italic';
+    src: url('../avenir_ff/Metropolis-ExtraBoldItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir_Medium_Italic';
+    src: url('../avenir_ff/Metropolis-MediumItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AvenirLTProHeavyOblique';
+    src: url('../avenir_ff/AvenirLTProHeavyOblique.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AvenirLTProBlackOblique';
+    src: url('../avenir_ff/AvenirLTProBlackOblique.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirLTProHeavy';
+    src: url('../avenir_ff/AvenirLTProHeavy.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
