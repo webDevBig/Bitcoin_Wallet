@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Wallet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!--    <link rel="stylesheet" href="style/font.css">-->
+    <link rel="stylesheet" href="style/header_footer.css">
+    <link rel="stylesheet" href="style/home_style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img alt="" src="img/logo.svg"> <span>Easy Bitcoin Wallet</span></a>
+                <button class="btn navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Bitcoin Wallet</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img alt="" src="img/united-states.svg">
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#"><img alt="" src="img/united-states.svg">English</a></li>
+                                <li><a class="dropdown-item" href="#"><img alt="" src="img/france.svg">French</a></li>
+                                <li><a class="dropdown-item" href="#"><img alt="" src="img/german.svg">German</a></li>
+                                <li><a class="dropdown-item" href="#"><img alt="" src="img/swedish.svg">Swedish</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><img alt="" src="img/exit.svg"></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="mobile_nav_bar">
+            <a class="nav-link" href="index.html">Bitcoin Wallet</a>
+            <a class="mobile_wallet_item"><img alt="" src="img/send.svg">Send</a>
+            <a class="mobile_wallet_item"><img alt="" src="img/trade.svg">Trade</a>
+            <a class="mobile_wallet_item"><img alt="" src="img/history.svg">History</a>
+            <a class="mobile_wallet_item"><img alt="" src="img/keys.svg">Keys</a>
+            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="#">Log Out <img alt="" src="img/exit.svg"></a>
+            <div class="lang_items">
+                <div>
+                    <input type="radio" id="color-1" name="color" value="color-1" checked>
+                    <label for="color-1">
+                        <span>
+                            <img src="img/united-states.svg" alt="" />
+                            English
+                        </span>
+                        <img src="img/check.svg" alt="Checked Icon" class="checked_icon" />
+                    </label>
+                </div>
+                <div>
+                    <input type="radio" id="color-2" name="color" value="color-2">
+                    <label for="color-2">
+                        <span>
+                            <img src="img/france.svg" alt="" />
+                            French
+                        </span>
+                        <img src="img/check.svg" alt="Checked Icon" class="checked_icon" />
+                    </label>
+                </div>
+                <div>
+                    <input type="radio" id="color-3" name="color" value="color-3">
+                    <label for="color-3">
+                        <span>
+                            <img src="img/german.svg" alt="" />
+                            German
+                        </span>
+                        <img src="img/check.svg" alt="Checked Icon" class="checked_icon" />
+                    </label>
+                </div>
+                <div>
+                    <input type="radio" id="color-4" name="color" value="color-4">
+                    <label for="color-4">
+                        <span>
+                            <img src="img/swedish.svg" alt="" />
+                            Swedish
+                        </span>
+                        <img src="img/check.svg" alt="Checked Icon" class="checked_icon" />
+                    </label>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <section class="main_section">
+        <div class="img_box">
+            <h1 class="h1">Bitcoin Rate</h1>
+            <div class="money_box">
+                <p class="cash">$ 41,420.45</p>
+                <p class="perc">4.23%</p>
+            </div>
+            <div class="show_data_box">
+                <p class="title">Show data:</p>
+                <p class="data_text active">1y</p>
+                <p class="data_text">1m</p>
+                <p class="data_text">1w</p>
+                <p class="data_text">1d</p>
+                <p class="data_text">4h</p>
+                <p class="data_text">1h</p>
+                <p class="data_text">15m</p>
+            </div>
+            <div class="graf"></div>
+            <!--            <img alt="graff" src="img/home_graf.svg">-->
+        </div>
+        <div class="wallet_box">
+            <h1 class="h1">Bitcoin Wallet</h1>
+            <div class="box">
+                <div class="row_box">
+                    <div class="clm_box">
+                        <p class="title">Your balance:</p>
+                        <p class="balance">1.00214122 BTC</p>
+                    </div>
+                    <div class="choose">
+                        <p class="item active">Legacy</p>
+                        <p class="item">Segwit</p>
+                        <p class="item">Bech32</p>
+                    </div>
+
+                </div>
+                <div class="row_box">
+                    <div class="clm_box">
+                        <p class="title">Your Address:</p>
+                        <p class="address">36ppV1BKp7734PPY26FBBJa5t46PoMUbtz</p>
+                    </div>
+                </div>
+                <div class="row_box btn_box">
+                    <button class="blue_btn send">Send
+                        <img alt="" src="img/send.svg" class="default">
+                        <img alt="" src="img/send_blue.svg" class="click">
+                    </button>
+                    <button class="blue_btn trade">Trade
+                        <img alt="" src="img/trade.svg" class="default">
+                        <img alt="" src="img/trade_blue.svg" class="click">
+                    </button>
+                    <button class="blue_btn history">History
+                        <img alt="" src="img/history.svg" class="default">
+                        <img alt="" src="img/history_blue.svg" class="click">
+                    </button>
+                    <button class="blue_btn keys">Keys
+                        <img alt="" src="img/keys.svg" class="default">
+                        <img alt="" src="img/keys_blue.svg" class="click">
+                    </button>
+                </div>
+            </div>
+            <div class="qr_box">
+                <div class="qr_img"></div>
+                <div class="text_box">
+                    <div class="clm_box">
+                        <p>Scan QR Code to get BTC Address</p>
+                        <a href="">How QR works?</a>
+                    </div>
+                    <div class="qr_img"></div>
+                    <div class="clm_box">
+                        <p>Support:</p>
+                        <a href="support@easybitcoinwallet.com" class="email">support@easybitcoinwallet.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div>
+            <a href="support@easybitcoinwallet.com" class="email">support@easybitcoinwallet.com</a>
+            <p style="font-weight: 500">Donations: <br> 36ppV1BKp7734PPY26FBBJa5t46PoMUbtz</p>
+        </div>
+        <div>
+            <p>Easy Bitcoin Wallet © 2021</p>
+        </div>
+    </footer>
+
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <script src="script/main_script.js"></script>
+</body>
+
+</html>

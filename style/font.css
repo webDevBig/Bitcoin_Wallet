@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Avenir';
+    src: url('../avenir_ff/Avenir_Regular.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Avenir-Black';
+    src: url('../avenir_ff/AvenirLTStd-Black.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'Avenir-Book';
+    src: url('../avenir_ff/AvenirLTStd-Book.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'Avenir_Roman';
+    src: url('../avenir_ff/AvenirLTStd-Roman.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
