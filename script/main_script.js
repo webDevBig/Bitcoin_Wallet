@@ -23,3 +23,27 @@ var open_menu = document.querySelectorAll('.navbar-toggler');
         el.classList.toggle('active');
     }
 });
+
+
+
+function cookie_show(){
+    $('.cookie_box').addClass('show');
+    $('body').css({
+        'overflow-y': 'hidden'
+    })
+}
+ setTimeout(cookie_show, 3000)
+
+$(".close_cookie").click(function(){
+     $('.cookie_box').removeClass('show');
+    $('body').css({
+        'overflow-y': 'scroll'
+    })
+})
+
+$(".accept_cookie").click(function(){
+     $('.cookie_box').removeClass('show');
+    $('body').css({
+        'overflow-y': 'scroll'
+    })
+})
