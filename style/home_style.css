@@ -68,8 +68,8 @@ h1.h1 {
 
 .money_box .cash {
     font-family: 'AvenirLTProHeavy';
-/*    font-style: normal;*/
-/*    font-weight: 900;*/
+    /*    font-style: normal;*/
+    /*    font-weight: 900;*/
     font-size: 40px;
     line-height: 55px;
     color: #1F1F1F;
@@ -159,7 +159,6 @@ h1.h1 {
 
 .wallet_box .box {
     border-top: 0.5px solid rgba(170, 184, 198, 0.7);
-    border-bottom: 0.5px solid rgba(170, 184, 198, 0.7);
     padding: 32px 0 24px;
     width: 100%;
     display: flex;
@@ -248,7 +247,7 @@ h1.h1 {
     cursor: pointer;
 }
 
-.blue_btn {
+.main_section .blue_btn {
     background: linear-gradient(260.6deg, #437FEC -9.17%, #2397F6 36.95%, #04AEFF 101.92%);
     border: 2px solid #FFFFFF;
     border-radius: 40px;
@@ -264,6 +263,7 @@ h1.h1 {
     align-items: center;
     cursor: pointer;
     transition: background .5s;
+    text-decoration: none;
 }
 
 .blue_btn img.default {
@@ -309,6 +309,7 @@ h1.h1 {
     justify-content: flex-start;
     align-items: stretch;
     padding: 24px 0;
+    border-top: 0.5px solid rgba(170, 184, 198, 0.7);
 }
 
 .qr_box .qr_img {
@@ -351,6 +352,56 @@ h1.h1 {
 }
 
 
+
+.main_section .btn_active {
+    box-shadow: none;
+    color: #0AABFE;
+    background: white;
+    border-color: #0AABFE;
+}
+
+.btn_active img.default {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+.btn_active img.click {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+}
+
+.trade_box {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 0;
+}
+
+.trade_box p {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 33px;
+    color: #1F1F1F;
+    margin: 0 0 20px;
+}
+
+.trade_box img {
+    width: 323px;
+}
+
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: flex;
+}
+
 @media all and (max-width:1024px) {
     .main_section {
         flex-direction: column-reverse;
@@ -384,7 +435,7 @@ h1.h1 {
         max-width: 355px;
         padding: 20px;
         height: auto;
-        min-height: 650px;
+        /*        min-height: 650px;*/
     }
 
     .wallet_box .row_box {
@@ -487,9 +538,33 @@ h1.h1 {
         margin: 20px 0 0;
         padding: 24px 0 0;
     }
-    .qr_box p
-    {
+
+    .qr_box p {
         text-align: center;
+    }
+
+    header .mobile_nav_bar a.mobile_wallet_item.btn_active {
+        color: #AAB8C6;
+    }
+
+    header .mobile_nav_bar a.mobile_wallet_item img.active {
+        display: none;
+    }
+
+    header .mobile_nav_bar a.mobile_wallet_item.btn_active img {
+        display: none;
+    }
+
+    header .mobile_nav_bar a.mobile_wallet_item.btn_active img.active {
+        display: inline-block;
+    }
+    .trade_box
+    {
+        padding: 20px 0;
+    }
+    .trade_box img
+    {
+        width: 294px;
     }
 }
 
