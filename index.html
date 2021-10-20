@@ -50,22 +50,22 @@
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample">
             <div class="mobile_nav_bar">
                 <a class="nav-link" href="index.html">Bitcoin Wallet</a>
-                <a class="mobile_wallet_item"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                <img alt="" src="img/send.svg">
-                <img alt="" src="img/send_gray.svg" class="active">
-                Send</a>
+                <a class="mobile_wallet_item mobile_send" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    <img alt="" src="img/send.svg">
+                    <img alt="" src="img/send_gray.svg" class="active">
+                    Send</a>
                 <a class="mobile_wallet_item mobile_trade" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                <img alt="" src="img/trade.svg" >
-                <img alt="" src="img/trade_gray.svg" class="active">
-                Trade</a>
-                <a class="mobile_wallet_item mobile_history"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                <img alt="" src="img/history.svg">
-                <img alt="" src="img/history_gray.svg" class="active">
-                History</a>
-                <a class="mobile_wallet_item"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                <img alt="" src="img/keys.svg">
-                <img alt="" src="img/keys_gray.svg" class="active">
-                Keys</a>
+                    <img alt="" src="img/trade.svg">
+                    <img alt="" src="img/trade_gray.svg" class="active">
+                    Trade</a>
+                <a class="mobile_wallet_item mobile_history" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    <img alt="" src="img/history.svg">
+                    <img alt="" src="img/history_gray.svg" class="active">
+                    History</a>
+                <a class="mobile_wallet_item mobile_keys" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    <img alt="" src="img/keys.svg">
+                    <img alt="" src="img/keys_gray.svg" class="active">
+                    Keys</a>
                 <a class="nav-link" href="about.html">About</a>
                 <a class="nav-link" href="#">Log Out <img alt="" src="img/exit.svg"></a>
                 <div class="lang_items">
@@ -133,7 +133,6 @@
                 <p class="data_text">15m</p>
             </div>
             <div class="graf"></div>
-            <!--            <img alt="graff" src="img/home_graf.svg">-->
         </div>
         <div class="wallet_box">
             <h1 class="h1">Bitcoin Wallet</h1>
@@ -156,7 +155,7 @@
                         <p class="address">36ppV1BKp7734PPY26FBBJa5t46PoMUbtz</p>
                     </div>
                 </div>
-                <div class="row_box btn_box">
+                <div class="row_box btn_box function_btn_box">
                     <a class="blue_btn send">Send
                         <img alt="" src="img/send.svg" class="default">
                         <img alt="" src="img/send_blue.svg" class="click">
@@ -189,9 +188,96 @@
                     </div>
                 </div>
             </div>
+            <div class="send_box">
+                <div class="send_view">
+                    <div class="form_row_box">
+                        <div class="item">
+                            <div class="inputs_box">
+                                <label class="label">SEND TO address:</label>
+                                <input type="text" value="" placeholder="Text input" class="long_input" id="send_to">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="inputs_box">
+                                <label class="label">Sum, BTC:</label>
+                                <input type="text" value="" placeholder="BTC" class="short_input">
+                                <label class="label_title">Available: 1.00214122 BTC</label>
+                            </div>
+                            <div class="btn_round btn_round_plus"></div>
+                        </div>
+                    </div>
+                    <div class="form_row_box">
+                        <div class="item">
+                            <div class="inputs_box">
+                                <input type="text" value="" placeholder="Text input" class="long_input">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="inputs_box">
+                                <input type="text" value="" placeholder="BTC" class="short_input">
+                            </div>
+                            <div class="btn_round btn_round_minus"></div>
+                        </div>
+                    </div>
+                    <div class="form_row_box">
+                        <div class="item">
+                            <div class="inputs_box">
+                                <label class="label">Fee:</label>
+                                <input type="text" value="" placeholder="0.000003212 BTC" class="long_input" class="short_input">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="inputs_box">
+                                <label class="label">DONATION:</label>
+                                <input type="text" value="" placeholder="BTC" class="short_input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn_box">
+                        <a class="cancel_btn">Cancel</a>
+                        <a class="send_btn">Send</a>
+                    </div>
+                </div>
+                <div class="confirm_view hide">
+                    <h3 class="h3">The transaction has been sent!</h3>
+                    <img alt="confirm" src="img/send_confirm.png" class="confirm_img hide">
+                    <img alt="failed" src="img/send_failed.png" class="failed_img hide">
+                    <div class="loading_content">
+                        <div class="circle" id="circle-c"></div>
+                    </div>
+                    <p class="title">Your SENT:</p>
+                    <p class="text">0.00214122 BTC</p>
+                    <p class="title">To Address:</p>
+                    <p class="adress">36ppV1BKp7734PPY26FBBJa5t46PoMUbtz</p>
+                    <div class="btn_box">
+                        <a class="return_btn">Return to Wallet</a>
+                        <a class="view_Blockchain_btn">View in Blockchain</a>
+                    </div>
+                </div>
+            </div>
             <div class="trade_box">
                 <p>Buy and Trade on</p>
                 <img alt="" src="img/about_logo.svg">
+            </div>
+            <div class="history_box"></div>
+            <div class="keys_box">
+                <div class="form_row_box">
+                    <label class="label">Public key:</label>
+                    <input type="text" value="" placeholder="Public Key">
+                </div>
+                <div class="form_row_box">
+                    <label class="label">Redeem script (SEGWIT):</label>
+                    <input type="text" value="" placeholder="Script">
+                </div>
+                <div class="form_row_box">
+                    <label class="label">private key:</label>
+                    <input type="text" value="" placeholder="Private Key">
+                </div>
+                <div class="form_row_box">
+                    <label class="label">Private key (AES256 encypted):</label>
+                    <input type="text" value="" placeholder="Private Key">
+                </div>
+
             </div>
         </div>
     </section>
@@ -224,6 +310,7 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.1.3/circle-progress.min.js"></script>
 
     <script src="script/main_script.js"></script>
     <script>

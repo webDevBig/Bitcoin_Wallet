@@ -142,7 +142,8 @@ h1.h1 {
 
 .wallet_box {
     width: 632px;
-    height: 651px;
+    height: auto;
+    min-height: 651px;
     background: #FFFFFF;
     box-shadow: -10px 20px 50px rgba(170, 184, 198, 0.3), -10px 10px 30px rgba(35, 48, 81, 0.1);
     border-radius: 40px;
@@ -372,9 +373,15 @@ h1.h1 {
     position: relative;
 }
 
+.trade_box,
+.send_box,
+.history_box,
+.keys_box {
+    display: none;
+}
+
 .trade_box {
     width: 100%;
-    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -393,14 +400,335 @@ h1.h1 {
     width: 323px;
 }
 
+.keys_box {
+    width: 100%;
+    flex-direction: column;
+}
 
-.hide {
+.keys_box .form_row_box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.keys_box .form_row_box:last-of-type {
+    margin: 0;
+}
+
+.keys_box label.label {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #1F1F1F;
+    margin: 0 0 10px;
+}
+
+.wallet_box input {
+    width: 528px;
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #AAB8C6;
+    box-sizing: border-box;
+    border-radius: 40px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    color: #1F1F1F;
+    padding: 12px 20px;
+    position: relative;
+}
+
+.wallet_box input::placeholder {
+    color: #AAB8C6;
+}
+
+.keys_box .form_row_box::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 16px;
+    background-image: url(../img/copy_icon.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    cursor: pointer;
+    bottom: 12px;
+    right: 0;
+}
+
+.wallet_box input::-webkit-contacts-auto-fill-button {
+    visibility: hidden;
+    display: none !important;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+}
+
+.wallet_box input:active,
+.wallet_box input:focus {
+    border: 1px solid #1A9FF9;
+    outline: none;
+}
+
+.send_box {
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: -24px 0 0;
+    border-top: 0.5px solid rgba(170, 184, 198, 0.7);
+    padding: 22px 0 0;
+}
+
+.send_box.send_box_confirm {
+    margin: 0;
+}
+
+.send_box .send_view {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.send_box .form_row_box {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 0 10px;
+}
+
+.send_box .item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 20px 0 0;
+}
+
+.send_box .item:last-of-type {
+    margin: 0;
+}
+
+.send_box .inputs_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.send_box .label {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #1F1F1F;
+    margin: 0 0 10px;
+}
+
+.send_box .label_title {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 14px;
+    color: #AAB8C6;
+    margin: 5px 0 0;
+}
+
+.send_box .long_input {
+    width: 348px;
+}
+
+.send_box .short_input {
+    width: 130px;
+}
+
+.send_box .btn_round {
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    border: 2px solid #FFFFFF;
+    margin: 0 0 0 20px;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.send_box .btn_round_plus {
+    box-shadow: 0 0 20px rgba(56, 136, 240, 0.78);
+    margin: 10px 0 0 20px;
+    background-image: url(../img/plus.svg), linear-gradient(260.6deg, #437FEC -9.17%, #2397F6 36.95%, #04AEFF 101.92%);
+}
+
+.send_box .btn_round_minus {
+    box-shadow: 0 0 20px #D8D8D8;
+    background-image: url(../img/minus.svg), linear-gradient(98.32deg, #D8D8D8 -22.81%, #979797 101.99%);
+}
+
+.send_box .btn_box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 24px 0 0;
+}
+
+.send_box .btn_box a {
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 0.045em;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 40px;
+    padding: 11px 54px 11px 20px;
+    position: relative;
+    margin: 0 11px;
+}
+
+.send_box .cancel_btn {
+    background: linear-gradient(98.32deg, #D8D8D8 -22.81%, #979797 101.99%);
+    box-shadow: 0 0 15px #D8D8D8;
+}
+
+.send_box .send_btn {
+    background: linear-gradient(260.6deg, #437FEC -9.17%, #2397F6 36.95%, #04AEFF 101.92%);
+    box-shadow: 0 0 15px rgba(56, 136, 240, 0.78);
+}
+
+.send_box a::after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    margin: 0 0 0 10px;
+}
+
+.send_box .send_btn::after {
+    background-image: url(../img/send.svg);
+    filter: invert(1);
+}
+
+.send_box .cancel_btn::after {
+    background-image: url(../img/cansel.svg);
+}
+
+.confirm_view {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirm_view .h3 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+    color: #1F1F1F;
+    margin: 0;
+}
+
+.confirm_view img {
+    max-width: 160px;
+    margin: 15px 0 32px;
+}
+
+.confirm_view img.hide {
+    display: none;
+}
+
+.confirm_view .text {
+    font-size: 18px;
+    line-height: 25px;
+    color: #1F1F1F;
+    font-family: 'AvenirLTProHeavy';
+    margin: 0 0 20px;
+}
+
+.confirm_view .adress {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    color: #1F1F1F;
+    margin: 0;
+}
+
+.confirm_view .btn_box {
+    margin: 59px 0 0;
+}
+
+.confirm_view .btn_box a {
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 0.045em;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 40px;
+    padding: 11px 0;
+    position: relative;
+    margin: 0;
+    width: 238px;
+    text-align: center;
+}
+
+.confirm_view a.return_btn {
+    background: linear-gradient(260.6deg, #43ECCE -9.17%, #30D2A2 36.95%, #2EC7B3 101.92%);
+    box-shadow: 0 0 15px rgba(52, 215, 170, 0.78);
+    margin: 0 34px 0 0;
+}
+
+.confirm_view a.view_Blockchain_btn {
+    background: linear-gradient(260.6deg, #437FEC -9.17%, #2397F6 36.95%, #04AEFF 101.92%);
+    box-shadow: 0 0 15px rgba(56, 136, 240, 0.78);
+}
+
+.loading_content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0 40px;
+}
+
+.circle {
+
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    vertical-align: top;
+    transform: rotate(90deg);
+}
+
+
+.hide,
+.wallet_box .function_btn_box.hide,
+.send_box .send_view.hide,
+.wallet_box .box.hide {
     display: none;
 }
 
 .show {
     display: flex;
 }
+
 
 @media all and (max-width:1024px) {
     .main_section {
@@ -435,7 +763,7 @@ h1.h1 {
         max-width: 355px;
         padding: 20px;
         height: auto;
-        /*        min-height: 650px;*/
+        min-height: auto;
     }
 
     .wallet_box .row_box {
@@ -558,13 +886,70 @@ h1.h1 {
     header .mobile_nav_bar a.mobile_wallet_item.btn_active img.active {
         display: inline-block;
     }
-    .trade_box
+    .send_box
     {
+        margin: 0;
+    }
+
+    .trade_box {
         padding: 20px 0;
     }
-    .trade_box img
-    {
+
+    .trade_box img {
         width: 294px;
+    }
+
+    .keys_box input {
+        width: 100%;
+    }
+
+    .keys_box .form_row_box::after {
+        right: 14px;
+    }
+
+    .confirm_view .h3 {
+        font-size: 18px;
+        line-height: 110%;
+    }
+
+    .confirm_view .adress {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .confirm_view .btn_box {
+        flex-direction: column;
+    }
+
+    .send_box .form_row_box {
+        flex-wrap: wrap;
+    }
+
+
+    .send_box .item,
+    .send_box .item:last-of-type {
+        width: 100%;
+        margin: 0 0 20px;
+    }
+
+    .send_box .long_input {
+        width: 315px;
+    }
+
+    .send_box .btn_box {
+        margin: 0;
+    }
+
+    .confirm_view a.return_btn {
+        margin: 0px 0 20px;
+    }
+    .confirm_view .btn_box
+    {
+        margin: 34px 0 22px;
+    }
+    .keys_box .form_row_box:last-of-type
+    {
+        margin: 0 0 20px;
     }
 }
 
